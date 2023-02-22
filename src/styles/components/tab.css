@@ -1,0 +1,27 @@
+
+:root {
+    --primary-color: #BA9256;
+  }
+  
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: var(--primary-color) !important;
+    font-weight: 400;
+  }
+  
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn:hover {
+    color: var(--primary-color) !important;
+    font-weight: 400;
+  }
+  
+  .ant-tabs-tab:hover {
+    color: #000 !important;
+    font-weight: 400;
+  }
+  
+  .ant-tabs-ink-bar {
+    border-radius: 100px 100px 0px 0px;
+    background: var(--primary-color) !important;
+    height: 4px !important;
+  }
+  

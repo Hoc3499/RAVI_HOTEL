@@ -1,0 +1,38 @@
+
+
+/* css modal*/
+:where(.css-dev-only-do-not-override-1km3mtt).ant-modal .ant-modal-content {
+    padding: 0;
+  
+  }
+  .ant-modal-title{
+    background-color: var(--primary-color);
+    height: 57px;
+    line-height: 57px !important;
+    padding-left: 16px;
+    color: white !important;
+    border-radius: 4px 4px 0 0;
+    font-size: 20px !important;
+  
+  }
+  
+  .ant-modal-content {
+    border-radius: 4px;
+    margin: 90px 8px 0;
+  }
+  
+  :where(.css-dev-only-do-not-override-1km3mtt).ant-modal .ant-modal-content {
+    border-radius: 4px;
+  }
+  
+  :where(.css-dev-only-do-not-override-1km3mtt).ant-modal-root .ant-modal-wrap {
+    background-color: rgba(red, green, blue, alpha) !important;
+  }
+  
+  .ant-modal-close-x {
+    color: white;
+  }
+  
+  .ant-modal-body {
+    padding: 32px 16px;
+  }

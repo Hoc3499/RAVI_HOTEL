@@ -20,7 +20,7 @@ const BookingInfo = () => {
                 <TypeText label="Số điện thoại" require />
                 <TypeText label="Email" require />
             </div>
-            <div className="border mx-4 border-t-red-500 border-b-red-500 border-x-transparent mt-4 pt-3">
+            <div className="border mx-4 border-y border-x-transparent mt-4 pt-3 pb-4">
                 <span className=" font-bold text-xl ">Thông tin đặt phòng</span>
                 <div className='grid grid-cols-3 gap-y-5  mt-3'>
                     <TypeDate label='Thời gian nhận phòng' require />
@@ -49,7 +49,7 @@ const BookingInfo = () => {
                     <TypeDate label='Ngày nhắc' wrapCss='col-span-2' />
                 </div>
             </div>
-            <div className="border border-t-transparent border-b-red-500 border-x-transparent mx-4 mt-4 py-3">
+            <div className="border border-t-transparent border-b border-x-transparent mx-4 py-3">
                 <span className=" font-bold text-xl ">Thống kê</span>
                 <div className="grid grid-cols-3">
                     <SelectComp label='Công ty, đại lý du lịch' require />

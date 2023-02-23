@@ -9,7 +9,7 @@ interface Option {
 
 interface SelectProps {
     options?: Option[];
-    label: string;
+    label?: string;
     require?: any;
     wrapCss?: string;
 }

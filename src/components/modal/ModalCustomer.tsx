@@ -12,7 +12,7 @@ export interface ModalProps {
     setOpenModal: any;
 }
 
-const ModalComp = ({ openModal, setOpenModal }: ModalProps) => {
+const ModalCustomer = ({ openModal, setOpenModal }: ModalProps) => {
     return (
         <>
             <Modal
@@ -34,9 +34,9 @@ const ModalComp = ({ openModal, setOpenModal }: ModalProps) => {
                         <TypeText label="Hộ chiếu/Thẻ căn cước" />
                         <TypeText label="Quốc tịch" />
                         <div className={`relative border rounded  bg-[${COLORS.primaryColor}] text-white w-[40%] h-9 mt-[25px] text-center leading-9`}>
-                            <div className="ml-5 font-bold" >
+                            <span className="ml-5 font-bold" >
                                 Tìm kiếm
-                            </div>
+                            </span>
                             <img
                                 className="absolute top-[10px] left-3 w-[18px] h-[18px] "
                                 src={search}
@@ -48,9 +48,9 @@ const ModalComp = ({ openModal, setOpenModal }: ModalProps) => {
                     <div className="footer flex float-right w-1/3 cursor-pointer" >
                         <div className={`h-9 font-bold leading-9 px-2 text-[${COLORS.primaryColor}] rounded hover:bg-[#f7f1e6]`} onClick={() => setOpenModal(false)}>HỦY</div>
                         <div className={`relative border rounded mx-2 text-[${COLORS.primaryColor}] w-[40%] h-9 text-center leading-9`}>
-                            <div className="ml-5 font-bold" >
+                            <span className="ml-5 font-bold" >
                                 Thêm hồ sơ
-                            </div>
+                            </span>
                             <img
                                 className="absolute top-[10px] left-3 w-[18px] h-[18px] "
                                 src={note}
@@ -58,9 +58,9 @@ const ModalComp = ({ openModal, setOpenModal }: ModalProps) => {
                             />
                         </div>
                         <div className={`relative border rounded bg-[#ece3d5] text-[${COLORS.primaryColor}] w-[40%] h-9 text-center leading-9 `}>
-                            <div className="ml-5 font-bold" >
+                            <span className="ml-5 font-bold" >
                                 GÁN  HỒ SƠ
-                            </div>
+                            </span>
                             <img
                                 className="absolute top-[10px] left-3 w-[18px] h-[18px] "
                                 src={demography}
@@ -74,4 +74,4 @@ const ModalComp = ({ openModal, setOpenModal }: ModalProps) => {
     )
 }
 
-export default ModalComp
+export default ModalCustomer

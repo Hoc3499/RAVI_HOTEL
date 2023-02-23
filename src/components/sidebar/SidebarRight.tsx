@@ -30,11 +30,11 @@ const SidebarRight = () => {
             </div>
             <div className="  border-t  py-[19px] px-[15px]">
                 <div className="flex bg-[#E5E5E5] h-9 justify-evenly rounded">
-                    <div className="flex items-center rounded bg-white my-[2px] px-6" >
+                    <div className="flex items-center rounded bg-white my-[2px] w-full mx-1 justify-center" >
                         <img className="mr-2 h-5 w-5" src={lightMode} alt="" />
                         <button>Light</button>
                     </div>
-                    <div className="flex items-center rounded my-[2px] px-6 text-[#adadad]">
+                    <div className="flex items-center rounded my-[2px] mx-1 w-full text-[#adadad] justify-center">
                         <img className="mr-2 h-5 w-5" src={darkMode} alt="" />
                         <button>Dark</button>
                     </div>

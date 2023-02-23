@@ -8,7 +8,7 @@ const HeaderCustomerInfo = () => {
             <span className="font-bold text-xl">Thông tin người đặt</span>
             <div className="relative ">
                 <img src={create} alt="" className="w-[14px] h-[14px] absolute top-1 -left-6" />
-                <span className={`text-[12px] text-[${COLORS.primaryColor}]`}>Chỉnh sửa thông tin khách đặt</span>
+                <span className={`text-[12px] text-[${COLORS.primaryColor}]`}>Chỉnh sửa thông tin</span>
             </div>
         </div>
     )

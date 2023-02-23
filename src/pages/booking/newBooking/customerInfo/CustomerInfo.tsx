@@ -10,8 +10,9 @@ import TypeRadio from "../../../../components/input/TypeRadio";
 import TypeCheckbox from "../../../../components/input/TypeCheckbox";
 import SelectComp from "../../../../components/select/SelectComp";
 import { COLORS } from "../../../../constants/colors";
-import ModalComp from "../../../../components/modal";
 import HeaderCustomerInfo from "../../../../components/headerCI";
+import ModalCustomer from "../../../../components/modal/ModalCustomer";
+import TextAreaComp from "../../../../components/input/TextAreaComp";
 
 
 const CustomerInfo = () => {
@@ -35,7 +36,7 @@ const CustomerInfo = () => {
                 <div className=" col-span-3 mt-[13px] text-xs">
                     <div className="  grid grid-cols-3  mb-5">
                         <Profile label="Hồ sơ" setOpenModal={setOpenModal} />
-                        {openModal && <ModalComp openModal={openModal} setOpenModal={setOpenModal} />}
+                        {openModal && <ModalCustomer openModal={openModal} setOpenModal={setOpenModal} />}
                         <TypeText label="Họ và tên" require />
                         <TypeDate label="Ngày sinh" />
                         <TypeRadio />
@@ -93,8 +94,7 @@ const CustomerInfo = () => {
                         <TypeText label="Nơi cấp CCCD" require />
                     </div>
                     <div className="mb-4 mr-4">
-                        <span className="mb-1">Lưu ý</span>
-                        <TextArea rows={6} />
+                        <TextAreaComp label="Lưu ý" rows={5} />
                     </div>
                 </div>
             </div>

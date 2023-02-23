@@ -7,7 +7,12 @@ import TypeDate from '../../../../components/input/TypeDate'
 import TypeNumber from '../../../../components/input/TypeNumber'
 import TypeRadio from '../../../../components/input/TypeRadio'
 import TypeText from '../../../../components/input/TypeText'
+import ModalRoom from '../../../../components/modal/ModalRoom'
 import SelectComp from '../../../../components/select/SelectComp'
+import { COLORS } from '../../../../constants/colors'
+import add from "../../../../assets/icons/add_FILL0_wght400_GRAD0_opsz48.svg"
+import info from "../../../../assets/icons/info_black_24dp.svg";
+
 
 const BookingInfo = () => {
     return (
@@ -36,6 +41,7 @@ const BookingInfo = () => {
                 <div className="grid grid-cols-12 ">
                     <TypeCheckbox label='Đặt nhiều' wrapCss='col-span-2' />
                     <Profile label='Phòng' require wrapCss='col-span-2' />
+                    {false && <ModalRoom />}
                     <TypeText label='Số đêm' wrapCss='col-span-2' />
                     <TypeNumber label='NL/TE' />
                     <TypeNumber wrapCss='mt-[22px]' />
@@ -59,13 +65,13 @@ const BookingInfo = () => {
                     <SelectComp label='Nguồn' />
                 </div>
             </div>
-            <div className="border grid grid-cols-3 mx-4 border-t-transparent border-b-red-500 border-x-transparent mt-1 pt-3">
+            <div className="border grid grid-cols-3 mx-4 border-t-transparent  border-x-transparent mt-1 pt-3">
                 <div className="">
                     <span className=" font-bold text-xl ">Giá phòng</span>
-                    <div className="grid grid-cols-3 mt-10 mb-6 ">
-                        <TypeCheckbox label='Nội bộ' />
-                        <TypeCheckbox label='Miễn phí' />
-                        <TypeCheckbox label='Không in giá' />
+                    <div className="grid grid-cols-10 mt-10 mb-6 ">
+                        <TypeCheckbox label='Nội bộ' wrapCss='col-span-3' />
+                        <TypeCheckbox label='Miễn phí' wrapCss='col-span-3' />
+                        <TypeCheckbox label='Không in giá' wrapCss='col-span-4' />
                     </div>
                     <div className="grid grid-cols-2 ">
                         <TypeCheckbox label='NETT' />
@@ -81,20 +87,33 @@ const BookingInfo = () => {
                 </div>
                 <div className="">
                     <span className=" font-bold text-xl ">Giảm giá</span>
-                    <div className="mt-[10px] grid grid-cols-1 gap-y-4">
+                    <div className=" grid grid-cols-1 mt-1">
                         <div className="grid grid-cols-4">
                             <DiscountInput label='Giảm giá' img='percent' />
                             <DiscountInput wrapCss='col-span-3 mt-[22px] ' img='money' />
                         </div>
-                        <TypeText label='Đêm tính tiền' wrapCss='' />
-                        <TypeText label='Lí do giảm giá' wrapCss='' />
+                        <TypeText label='Đêm tính tiền' wrapCss='mt-[21px]' />
+                        <TypeText label='Lí do giảm giá' wrapCss='mt-1' />
                     </div>
                 </div>
                 <div className="">
                     <span className=" font-bold text-xl ">Gói</span>
+                    <div className="grid grid-cols-1 ml-8 gap-y-14 mt-9">
+                        <div className="relative ">
+                            <img src={add} alt="" className="w-[20px] h-[20px] absolute top-[2px] -left-8" />
+                            <span className={`text-[14px] text-[${COLORS.primaryColor}]`}>Thêm/Sửa</span>
+                        </div>
+                        <div className="">Gói bổ sung</div>
+                        <div className="mt-1">Gói trong mã giá</div>
+                        <div className="relative ">
+                            <img src={info} alt="" className="w-[20px] h-[20px] absolute top-[2px] -left-8" />
+                            <span className={`text-[14px] text-[${COLORS.primaryColor}]`}>Hiển thị thông tin gói</span>
+                        </div>
+                    </div>
                 </div>
-
-
+            </div>
+            <div className="mt-4 mx-4  pt-3 pb-4">
+                adasdasds
             </div>
         </div>
     )

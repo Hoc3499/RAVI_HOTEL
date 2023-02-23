@@ -14,7 +14,7 @@ const Profile = ({ setOpenModal, require, label, wrapCss }: ProfileProps) => {
             <label htmlFor="" className="">{label}</label>
             {require && <span className="text-red-500 ml-1">*</span>}
             <div className="input flex items-center relative top-1">
-                <div className="absolute right-[2px] bg-[#F5F5F5] rounded p-[7px]">
+                <div className="absolute right-[2px] bg-[#F5F5F5] rounded p-[10px]">
                     <img
                         className=" w-[18px] h-[18px] cursor-pointer"
                         src={search}

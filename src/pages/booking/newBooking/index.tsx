@@ -17,7 +17,7 @@ const NewBooking = () => {
                         <div className="text flex flex-col text-[14px]">
                             <TypeCheckbox label="Xác nhận: 20899" />
                             <TypeCheckbox label="Đặt phòng: 31245" css="invisible" />
-                            {/* <span>Xác nhận: 20899</span>
+                            {/* <span>Xác nhận: 20899</span> css="invisible " 
                             <span>Đặt phòng: 31245</span> */}
                         </div>
                     </div>

@@ -1,14 +1,14 @@
 
 interface CheckboxProps {
     css?: string;
-    label: string;
+    label?: string;
     wrapCss?: string;
     require?: any;
 }
 
 const TypeCheckbox = ({ css, label, wrapCss, require }: CheckboxProps) => {
     return (
-        <div className={`${wrapCss ? `${wrapCss} flex items-center` : `flex items-center`} `}>
+        <div className={`${wrapCss ? `${wrapCss} flex items-center` : `flex items-center `} `}>
             <input type="checkbox" className={` ${css}`} />
             <div className="ml-3 mr-[30px] text-sm" >
                 <label htmlFor="">{label}</label>

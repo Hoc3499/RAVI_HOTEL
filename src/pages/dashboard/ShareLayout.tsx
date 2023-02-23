@@ -7,7 +7,7 @@ const ShareLayout = () => {
     return (
         <div className='grid grid-cols-4 mt-[16px]'>
             <Sidebar />
-            <div className='col-span-3 flex flex-col mr-[40px]'>
+            <div className='col-span-3 col-start-2 flex flex-col mr-[40px]'>
                 <NavSearch />
                 <div className=" mt-[40px]">
                     <Outlet />

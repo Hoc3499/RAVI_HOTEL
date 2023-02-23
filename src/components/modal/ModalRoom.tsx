@@ -1,14 +1,11 @@
-import React from 'react'
 import { Modal } from 'antd';
-import TypeText from '../input/TypeText';
-import search from "../../assets/icons/search_FILL0_wght400_GRAD0_opsz48.svg"
-import arrowRight from "../../assets/icons/arrow_right_alt_FILL0_wght400_GRAD0_opsz48.svg"
-import done from "../../assets/icons/done_black_24dp.svg"
-import note from "../../assets/icons/add_notes_FILL0_wght400_GRAD0_opsz48.svg"
-import demography from "../../assets/icons/demography_FILL0_wght400_GRAD0_opsz48.svg"
+import arrowRight from "../../assets/icons/arrow_right_alt_FILL0_wght400_GRAD0_opsz48.svg";
+import done from "../../assets/icons/done_black_24dp.svg";
+import search from "../../assets/icons/search_FILL0_wght400_GRAD0_opsz48_white.svg";
 import { COLORS } from '../../constants/colors';
-import SelectComp from '../select/SelectComp';
 import TypeCheckbox from '../input/TypeCheckbox';
+import TypeText from '../input/TypeText';
+import SelectComp from '../select/SelectComp';
 
 
 export interface ModalProps {

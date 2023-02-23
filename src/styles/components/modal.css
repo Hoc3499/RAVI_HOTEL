@@ -1,10 +1,6 @@
 
 
 /* css modal*/
-:where(.css-dev-only-do-not-override-1km3mtt).ant-modal .ant-modal-content {
-    padding: 0;
-  
-  }
   .ant-modal-title{
     background-color: var(--primary-color);
     height: 57px;
@@ -18,15 +14,19 @@
   
   .ant-modal-content {
     border-radius: 4px;
-    margin: 90px 8px 0;
+    margin: 90px 8px 20px;
+  }
+
+  .modal-create-file {
+    margin-top: -110px;
+    margin-left: -8px;
   }
   
-  :where(.css-dev-only-do-not-override-1km3mtt).ant-modal .ant-modal-content {
+
+  :where(.css-dev-only-do-not-override-1n7uv0s).ant-modal .ant-modal-content {
+    padding: 0;
     border-radius: 4px;
-  }
-  
-  :where(.css-dev-only-do-not-override-1km3mtt).ant-modal-root .ant-modal-wrap {
-    background-color: rgba(red, green, blue, alpha) !important;
+    margin-left: 20px;
   }
   
   .ant-modal-close-x {

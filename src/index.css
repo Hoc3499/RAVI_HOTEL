@@ -2,6 +2,7 @@
 @import "./styles/components/input.css";
 @import "./styles/components/tab.css";
 @import "./styles/components/modal.css";
+@import "./styles/components/table.css";
 
 
 @tailwind base;
@@ -11,16 +12,20 @@
 
 :root {
   --primary-color: #BA9256;
+  --sidebar-theme-color: #BA9256;
 }
+
+
 
 body {
   margin: 0;
-  font-family:  'Lexend',  sans-serif;
+  font-family:  'Lexend',  sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family:  source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+

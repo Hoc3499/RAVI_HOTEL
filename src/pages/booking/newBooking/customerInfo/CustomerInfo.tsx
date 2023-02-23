@@ -1,22 +1,19 @@
-import { Input } from "antd";
-import card_travel from "../../../../assets/icons/card_travel_black_24dp.svg";
+import { useState } from "react";
 import connecting_airports from "../../../../assets/icons/connecting_airports_black_24dp.svg";
 import done from "../../../../assets/icons/done_black_24dp.svg";
-import { useState } from "react";
-import Profile from "../../../../components/input/profile";
-import TypeText from "../../../../components/input/TypeText";
+import HeaderCustomerInfo from "../../../../components/headerCI";
+import Profile from "../../../../components/input/inputSearch";
+import TextAreaComp from "../../../../components/input/TextAreaComp";
+import TypeCheckbox from "../../../../components/input/TypeCheckbox";
 import TypeDate from "../../../../components/input/TypeDate";
 import TypeRadio from "../../../../components/input/TypeRadio";
-import TypeCheckbox from "../../../../components/input/TypeCheckbox";
+import TypeText from "../../../../components/input/TypeText";
+import ModalCustomer from "../../../../components/modal/modalCustomer/ModalCustomer";
 import SelectComp from "../../../../components/select/SelectComp";
 import { COLORS } from "../../../../constants/colors";
-import HeaderCustomerInfo from "../../../../components/headerCI";
-import ModalCustomer from "../../../../components/modal/ModalCustomer";
-import TextAreaComp from "../../../../components/input/TextAreaComp";
 
 
 const CustomerInfo = () => {
-    const { TextArea } = Input;
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [openModal, setOpenModal] = useState<boolean>(false)
 
@@ -26,24 +23,23 @@ const CustomerInfo = () => {
 
     return (
         <div className="flex flex-col border rounded">
-            <HeaderCustomerInfo />
+            <HeaderCustomerInfo label="Chỉnh sửa thông tin khách đặt" />
             <div className=" grid grid-cols-4 ">
                 <div className=" mt-4 ml-4 ">
                     <div className="box w-[calc(100%-16px)] h-[202.5px] bg-[#F3F3F3] rounded mb-4"></div>
                     <div className="box w-[calc(100%-16px)] h-[202.5px] bg-[#F3F3F3] rounded"></div>
-                    <img src={card_travel} alt="card_travel" />
                 </div>
                 <div className=" col-span-3 mt-[13px] text-xs">
                     <div className="  grid grid-cols-3  mb-5">
                         <Profile label="Hồ sơ" setOpenModal={setOpenModal} />
-                        {openModal && <ModalCustomer openModal={openModal} setOpenModal={setOpenModal} />}
+                        <ModalCustomer openModal={openModal} setOpenModal={setOpenModal} />
                         <TypeText label="Họ và tên" require />
                         <TypeDate label="Ngày sinh" />
                         <TypeRadio />
                         <div className="type">
                             <div className="">
                                 <span className="text-xs ">Loại khách</span>
-                                <div className="flex font-bold mt-[11px]">
+                                <div className="flex mt-[11px]">
                                     <TypeCheckbox label="Khách chính" />
                                     <TypeCheckbox label="Trẻ em" />
                                 </div>

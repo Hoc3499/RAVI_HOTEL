@@ -1,10 +1,12 @@
-import React from 'react'
 import { Modal } from 'antd';
-import TypeText from '../input/TypeText';
-import search from "../../assets/icons/search_FILL0_wght400_GRAD0_opsz48.svg"
-import note from "../../assets/icons/add_notes_FILL0_wght400_GRAD0_opsz48.svg"
-import demography from "../../assets/icons/demography_FILL0_wght400_GRAD0_opsz48.svg"
-import { COLORS } from '../../constants/colors';
+import { useState } from 'react';
+import note from "../../../assets/icons/add_notes_FILL0_wght400_GRAD0_opsz48.svg";
+import demography from "../../../assets/icons/demography_FILL0_wght400_GRAD0_opsz48.svg";
+import search from "../../../assets/icons/search_FILL0_wght400_GRAD0_opsz48_white.svg";
+import { COLORS } from '../../../constants/colors';
+import TypeText from '../../input/TypeText';
+import CustomerProfile from '../../table/CustomerProfile';
+import ModalCreateFile from './ModalCreateFile';
 
 
 export interface ModalProps {
@@ -13,6 +15,7 @@ export interface ModalProps {
 }
 
 const ModalCustomer = ({ openModal, setOpenModal }: ModalProps) => {
+    const [openCreateFileModal, setOpenCreateFileModal] = useState(false)
     return (
         <>
             <Modal
@@ -21,12 +24,12 @@ const ModalCustomer = ({ openModal, setOpenModal }: ModalProps) => {
                 open={openModal}
                 // onOk={() => setOpenModal(false)}
                 onCancel={() => setOpenModal(false)}
-                width={1340}
-                bodyStyle={{ height: "60vh" }}
+                width={"98vw"}
+                bodyStyle={{}}
                 footer={null}
             >
                 <div className="">
-                    <div className="form grid grid-cols-4">
+                    <div className="form grid grid-cols-4 mb-5">
                         <TypeText label='Họ và tên khách hàng' />
                         <TypeText label="Số điện thoại" />
                         <TypeText label="Địa chỉ" />
@@ -44,13 +47,14 @@ const ModalCustomer = ({ openModal, setOpenModal }: ModalProps) => {
                             />
                         </div>
                     </div>
-                    <div>Table</div>
-                    <div className="footer flex float-right w-1/3 cursor-pointer" >
+                    <CustomerProfile />
+                    <div className="footer -mt-7 flex float-right w-1/3 cursor-pointer" >
                         <div className={`h-9 font-bold leading-9 px-2 text-[${COLORS.primaryColor}] rounded hover:bg-[#f7f1e6]`} onClick={() => setOpenModal(false)}>HỦY</div>
-                        <div className={`relative border rounded mx-2 text-[${COLORS.primaryColor}] w-[40%] h-9 text-center leading-9`}>
+                        <div className={`relative border rounded mx-2 text-[${COLORS.primaryColor}] w-[40%] h-9 text-center leading-9`} onClick={() => setOpenCreateFileModal(true)}>
                             <span className="ml-5 font-bold" >
                                 Thêm hồ sơ
                             </span>
+                            <ModalCreateFile open={openCreateFileModal} setOpen={setOpenCreateFileModal} />
                             <img
                                 className="absolute top-[10px] left-3 w-[18px] h-[18px] "
                                 src={note}

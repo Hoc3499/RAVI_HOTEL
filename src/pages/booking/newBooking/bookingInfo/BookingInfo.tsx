@@ -1,7 +1,7 @@
 import React from 'react'
 import DiscountInput from '../../../../components/discount'
 import HeaderCustomerInfo from '../../../../components/headerCI'
-import Profile from '../../../../components/input/profile'
+import Profile from '../../../../components/input/inputSearch'
 import TypeCheckbox from '../../../../components/input/TypeCheckbox'
 import TypeDate from '../../../../components/input/TypeDate'
 import TypeNumber from '../../../../components/input/TypeNumber'
@@ -11,13 +11,14 @@ import ModalRoom from '../../../../components/modal/ModalRoom'
 import SelectComp from '../../../../components/select/SelectComp'
 import { COLORS } from '../../../../constants/colors'
 import add from "../../../../assets/icons/add_FILL0_wght400_GRAD0_opsz48.svg"
-import info from "../../../../assets/icons/info_black_24dp.svg";
+import info from "../../../../assets/icons/info_primary_24dp.svg";
+import TextAreaComp from '../../../../components/input/TextAreaComp'
 
 
 const BookingInfo = () => {
     return (
         <div className='border '>
-            <HeaderCustomerInfo />
+            <HeaderCustomerInfo label='Chỉnh sửa thông tin' />
             <div className="grid grid-cols-3 gap-y-5 ml-4 ">
                 <Profile label="Hồ sơ" require />
                 <TypeRadio require />
@@ -113,7 +114,16 @@ const BookingInfo = () => {
                 </div>
             </div>
             <div className="mt-4 mx-4  pt-3 pb-4">
-                adasdasds
+                <span className=" font-bold text-xl ">Thông tin thanh toán</span>
+                <div className="grid grid-cols-3 mt-[10px]">
+                    <SelectComp label='Phương thức thanh toán' require />
+                    <div className="grid grid-cols-4">
+                        <TypeText label='Thẻ tín dụng' wrapCss='col-span-3' require />
+                        <TypeText wrapCss='mt-[22px]' />
+                    </div>
+                    <TypeText label='Tên chủ thẻ' />
+                </div>
+                <TextAreaComp label='Ghi chú' require rows={4} />
             </div>
         </div>
     )

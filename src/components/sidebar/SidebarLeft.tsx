@@ -18,9 +18,9 @@ import { SIDEBAR } from "../../constants/sidebar";
 
 const SidebarLeft = () => {
     return (
-        <div className={`w-[calc(100%-16px)] flex flex-col  bg-[#BA9256] text-white rounded justify-between ml-4`}>
+        <div className={`w-[calc(100%-16px)] bg-[#BA9256] text-white rounded justify-between ml-4 relative`}>
             <div className="bg-[#E5E5E5] rounded-full w-[40px] h-[40px] mx-auto mt-[18px] "></div>
-            <div className="icon flex flex-col items-center mb-[54px] ">
+            <div className="icon flex flex-col items-center my-[90px]  ">
                 {SIDEBAR.map(item => {
                     return (
                         <Link key={item.icon} to={item.path}>
@@ -40,10 +40,9 @@ const SidebarLeft = () => {
                 <img className="icon w-7 mb-[26px] h-7" src={monetization_on} alt="" />
                 <img className="icon w-7 mb-[26px] h-7" src={assignment} alt="" /> */}
             </div>
-            <div className="bot flex flex-col items-center mb-[22px]">
+            <div className="bot absolute left-7 bottom-0 mb-[22px]">
                 <img className="icon w-7 h-7 mb-5" src={info} alt="" />
                 <img className="icon w-7 h-7" src={settings} alt="" />
-
             </div>
         </div>
     );

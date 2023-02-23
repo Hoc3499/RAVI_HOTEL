@@ -8,7 +8,7 @@ const TypeRadio = ({ require }: TypeRadioProps) => {
         <div className="">
             <span className="text-xs">Giới tính</span>
             {require && <span className="text-red-500 ml-1">*</span>}
-            <div className="flex font-bold mt-[11px]">
+            <div className="flex font-normal mt-[11px]">
                 <div className="flex items-center">
                     <input type="radio" />
                     <label className="ml-3 mr-[30px] text-sm" htmlFor="">

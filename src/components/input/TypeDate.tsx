@@ -3,7 +3,7 @@ import { DatePicker } from 'antd';
 import React from 'react';
 
 interface DateProps {
-    label: string;
+    label?: string;
     wrapCss?: string;
     require?: any;
 }

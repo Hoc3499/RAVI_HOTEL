@@ -94,7 +94,7 @@ const CustomerInfo = () => {
                     </div>
                 </div>
             </div>
-
+            <CustomerInfo />
         </div>
     );
 };

@@ -1,104 +1,81 @@
-
 :root {
-    --primary-color: #BA9256;
-  }
-  
+  --primary-color: #ba9256;
+}
 
 .ant-picker-dropdown .ant-picker-cell .ant-picker-cell-inner {
-    border-radius: 50%;
-  }
+  border-radius: 50%;
+}
 
-  :where(.css-dev-only-do-not-override-1km3mtt).ant-picker-dropdown
-    .ant-picker-cell-in-view.ant-picker-cell-selected
-    .ant-picker-cell-inner,
-  :where(.css-dev-only-do-not-override-1km3mtt).ant-picker-dropdown
-    .ant-picker-cell-in-view.ant-picker-cell-range-start
-    .ant-picker-cell-inner,
-  :where(.css-dev-only-do-not-override-1km3mtt).ant-picker-dropdown
-    .ant-picker-cell-in-view.ant-picker-cell-range-end
-    .ant-picker-cell-inner {
-    background-color: var(--primary-color);
-  }
-  
-  :where(.css-dev-only-do-not-override-1km3mtt).ant-picker-dropdown
-    .ant-picker-cell-in-view.ant-picker-cell-today
-    .ant-picker-cell-inner::before {
-    border: 1px solid var(--primary-color);
-    border-radius: 100rem;
-  }
-  
-  :where(.css-dev-only-do-not-override-1km3mtt).ant-picker:hover,
-  :where(.css-dev-only-do-not-override-1km3mtt).ant-picker-focused {
-    border-color: var(--primary-color);
-  }
-  
-  :where(.css-dev-only-do-not-override-1km3mtt).ant-picker-focused {
-    box-shadow: none;
-  }
-  
-  :where(.css-dev-only-do-not-override-1km3mtt).ant-picker-dropdown
-    .ant-picker-today-btn {
-    color: var(--primary-color);
-  }
-  
-  .ant-select-selection.ant-select-selection--single {
-    height: 53px;
-  }
-  
-  :where(.css-dev-only-do-not-override-1km3mtt).ant-picker-dropdown .ant-picker-today-btn:hover { 
-    color: var(--primary-color)
-  }
-  
-  :where(.css-dev-only-do-not-override-1km3mtt).ant-picker-dropdown .ant-picker-header-view button:hover {
-    color: var(--primary-color)
-  }
-  .ant-select-selector {
-    height: 36px !important;
-    border-radius: 4px !important;
-  }
-  
-  .ant-select-selector:hover {
-    border-color: #d1d1d1 !important;
-  
-  }
-  
-  :where(.css-dev-only-do-not-override-1km3mtt).ant-input:focus {
-    border-color: #BABABA;
-    box-shadow: none;
-  }
-  
-  :where(.css-dev-only-do-not-override-1km3mtt).ant-input:hover {
-    border-color: #BABABA;
-  }
-  
-  /* Custom input radio */
-  
-  input[type="radio"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    padding: 3px;
-    background-clip: content-box;
-    border: 1px solid gray;
-    border-radius: 50%;
-  }
-  input[type="radio"]:checked {
-    background-color: var(--primary-color);
-  }
-  
-  input[type=checkbox] {
-    opacity: 0.7;
-    filter: hue-rotate(192deg);
-    cursor: pointer;
-  }
-  
-  /* css datepicker */
-  
-  :where(.css-dev-only-do-not-override-1km3mtt).ant-picker-dropdown .ant-picker-panel .ant-picker-footer {
-    border-top: none;
-    color: var(--primary-color);
-    font-weight: bold;
-  }
+.ant-select-selection.ant-select-selection--single {
+  height: 53px;
+}
+
+.ant-select-selector {
+  height: 36px !important;
+  border-radius: 4px !important;
+}
+
+.ant-select-selector:hover {
+  border-color: #d1d1d1 !important;
+}
+
+/* Custom input radio */
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  padding: 3px;
+  background-clip: content-box;
+  border: 1px solid gray;
+  border-radius: 50%;
+}
+input[type="radio"]:checked {
+  background-color: var(--primary-color);
+}
+
+input[type="checkbox"] {
+  opacity: 0.7;
+  filter: hue-rotate(192deg);
+  cursor: pointer;
+}
+
+/* css datepicker */
+
+.ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before {
+  border-radius: 50% !important;
+  border-color: var(--primary-color) !important;
+}
+
+.ant-picker-dropdown
+  .ant-picker-cell-in-view.ant-picker-cell-selected
+  .ant-picker-cell-inner {
+  background-color: var(--primary-color);
+}
+
+.ant-picker-dropdown .ant-picker-panel .ant-picker-footer {
+  color: var(--primary-color) !important;
+}
+
+.ant-picker-dropdown .ant-picker-header-view button:hover {
+  color: var(--primary-color) !important;
+}
+
+.ant-picker:hover {
+  border-color: #cfcece;
+  box-shadow: none !important;
+}
+.ant-picker:focus {
+  border-color: #cfcece;
+}
+
+.ant-input:hover {
+  border-color: #cfcece;
+}
+.ant-input:focus {
+  border-color: #cfcece;
+  box-shadow: none;
+}

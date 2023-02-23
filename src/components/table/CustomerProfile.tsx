@@ -39,13 +39,13 @@ const columns: ColumnsType<DataType> = [
     {
         title: "Danh xưng",
         key: "callBY",
-        width: "5%",
+        width: "6.5%",
         dataIndex: "callBY",
     },
     {
         title: "Giới tính",
         key: "gender",
-        width: "5%",
+        width: "6%",
         dataIndex: "gender",
     },
     {
@@ -87,7 +87,7 @@ const columns: ColumnsType<DataType> = [
     {
         title: "Địa chỉ",
         key: "address",
-        width: "18%",
+        width: "15.5%",
         dataIndex: "address",
     },
 ];

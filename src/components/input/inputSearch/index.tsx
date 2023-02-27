@@ -5,15 +5,16 @@ interface ProfileProps {
     require?: any;
     label?: string;
     wrapCss?: string;
+    inputCss?: string;
 }
 
-const Profile = ({ setOpenModal, require, label, wrapCss }: ProfileProps) => {
+const InputSearch = ({ setOpenModal, require, label, wrapCss, inputCss }: ProfileProps) => {
 
     return (
         <div className={`${wrapCss ? `${wrapCss} mr-[15px]` : `mr-[15px]`}`}>
-            <label htmlFor="" className="">{label}</label>
+            <label htmlFor="" className="font-light text-xs">{label}</label>
             {require && <span className="text-red-500 ml-1">*</span>}
-            <div className="input flex items-center relative top-1">
+            <div className={`${inputCss ? `${inputCss} flex items-center relative` : `flex items-center relative mt-[4px]`}`}>
                 <div className="absolute right-[2px] bg-[#F5F5F5] rounded p-[10px]">
                     <img
                         className=" w-[18px] h-[18px] cursor-pointer"
@@ -24,11 +25,11 @@ const Profile = ({ setOpenModal, require, label, wrapCss }: ProfileProps) => {
                 </div>
                 <input
                     type="text"
-                    className="border py-[9px] rounded w-full outline-none pl-3"
+                    className="border py-[9px] rounded w-full outline-none pl-3 h-9"
                 />
             </div>
         </div>
     )
 }
 
-export default Profile
+export default InputSearch

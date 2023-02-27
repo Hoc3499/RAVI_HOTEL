@@ -1,0 +1,15 @@
+:root {
+  --sidebar-theme-color: #BA9256;
+  --button-primary-color: #BA9256;
+  --text-primary-color: #BA9256;
+}
+
+.text-primary {
+  color: var(--text-primary-color);
+}
+.btn-primary {
+  background: var(--button-primary-color);
+}
+.sidebar {
+  background: var(--sidebar-theme-color);
+}

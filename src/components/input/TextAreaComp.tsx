@@ -13,7 +13,7 @@ const TextAreaComp = ({ label, require, rows, wrapCss }: TextAreaCompProps) => {
 
   return (
     <div className={`${wrapCss}`}>
-      <span className="">{label}</span>
+      <span className="font-light text-xs">{label}</span>
       {require && <span className="text-red-500 ml-1">*</span>}
       <TextArea rows={rows} />
     </div>

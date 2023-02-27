@@ -1,4 +1,3 @@
-import React from 'react'
 import { Select } from 'antd';
 
 interface Option {
@@ -20,8 +19,8 @@ const SelectComp = ({ label, options, require, wrapCss }: SelectProps) => {
     return (
 
         <div className={`${wrapCss ? `${wrapCss} flex flex-col mr-4 mb-[15px]` : "flex flex-col mr-4 mb-[15px]"}`}>
-            <div className="mb-1" >
-                <label htmlFor="">{label}</label>
+            <div className="mb-1 text-xs" >
+                <label htmlFor="" className='font-light'>{label}</label>
                 {require && <span className="text-red-500 ml-1">*</span>}
             </div>
             <Select

@@ -3,6 +3,7 @@
 @import "./styles/components/tab.css";
 @import "./styles/components/modal.css";
 @import "./styles/components/table.css";
+@import "./styles/themes.css";
 
 
 @tailwind base;
@@ -10,10 +11,6 @@
 @tailwind utilities;
 
 
-:root {
-  --primary-color: #BA9256;
-  --sidebar-theme-color: #BA9256;
-}
 
 
 
@@ -27,5 +24,10 @@ body {
 code {
   font-family:  source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.sbl-bot {
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 

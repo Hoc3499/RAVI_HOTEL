@@ -65,17 +65,38 @@ input[type="checkbox"] {
 }
 
 .ant-picker:hover {
-  border-color: #cfcece;
+  border-color: #c4c4c4;
   box-shadow: none !important;
 }
 .ant-picker:focus {
-  border-color: #cfcece;
+  border-color: #c4c4c4 !important;
+}
+
+.ant-picker-focused {
+  border-color: #c4c4c4 !important;
+  box-shadow: none !important;
+
 }
 
 .ant-input:hover {
-  border-color: #cfcece;
+  border-color: #c4c4c4 !important;
 }
 .ant-input:focus {
-  border-color: #cfcece;
+  border-color: #c4c4c4 !important;
   box-shadow: none;
+}
+
+
+.ant-select-selector:hover, .ant-select-selector:focus-within {
+  border: 1px solid #c4c4c4 !important;
+  box-shadow: none !important;
+}
+
+.ant-select-item-option:hover {
+  background: rgba(37, 37, 37, 0.08) !important;
+}
+
+.ant-select-item-option-selected,  .ant-select-item-option-selected:hover{
+  background: rgba(37, 37, 37, 0.08) !important;
+  font-weight: 400 !important;
 }

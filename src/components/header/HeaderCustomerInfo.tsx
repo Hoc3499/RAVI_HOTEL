@@ -1,5 +1,4 @@
 import React from 'react'
-import { COLORS } from '../../constants/colors'
 import create from "../../assets/icons/edit_FILL0_wght400_GRAD0_opsz48.svg";
 
 interface Props {
@@ -13,7 +12,7 @@ const HeaderCustomerInfo = ({ label }: Props) => {
             <span className="font-bold text-xl">Thông tin người đặt</span>
             <div className="relative ">
                 <img src={create} alt="" className="w-[14px] h-[14px] absolute top-1 -left-6" />
-                <span className={`text-[12px] text-[${COLORS.primaryColor}]`}>{label}</span>
+                <span className={`text-[12px] text-primary`}>{label}</span>
             </div>
         </div>
     )

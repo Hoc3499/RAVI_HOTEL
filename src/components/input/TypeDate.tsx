@@ -14,8 +14,8 @@ const TypeDate = ({ label, wrapCss, require }: DateProps) => {
     };
     return (
         <div className={`${wrapCss ? `${wrapCss} flex flex-col mr-4` : "flex flex-col mr-4 mb-[15px]"}`}>
-            <div className="mb-1" >
-                <label htmlFor="">{label}</label>
+            <div className="mb-1 text-xs" >
+                <label htmlFor="" className='font-light'>{label}</label>
                 {require && <span className="text-red-500 ml-1">*</span>}
             </div>
             <DatePicker showToday={false} placeholder='' onChange={onChange} className="border pl-2 py-[6px] rounded outline-none cursor-pointer"

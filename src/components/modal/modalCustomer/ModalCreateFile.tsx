@@ -1,12 +1,11 @@
-import React from 'react'
 import { Modal } from 'antd';
-import TypeText from '../../input/TypeText';
-import { COLORS } from '../../../constants/colors';
 import done from "../../../assets/icons/done_black_24dp.svg";
-import SelectComp from '../../select/SelectComp';
-import TypeDate from '../../input/TypeDate';
-import TypeRadio from '../../input/TypeRadio';
+import Button from '../../button/Button';
+import Gender from '../../gender/Gender';
 import TextAreaComp from '../../input/TextAreaComp';
+import TypeDate from '../../input/TypeDate';
+import TypeText from '../../input/TypeText';
+import SelectComp from '../../select/SelectComp';
 
 interface ModalProps {
     open?: boolean;
@@ -14,6 +13,9 @@ interface ModalProps {
 }
 
 const ModalCreateFile = ({ open, setOpen }: ModalProps) => {
+    const handleClose = () => {
+        setOpen(false)
+    }
     return (
         <Modal
             title="Thêm hồ sơ 21345"
@@ -35,7 +37,7 @@ const ModalCreateFile = ({ open, setOpen }: ModalProps) => {
                         </div>
                         <div className="mt-[26px]">
                             <TypeText label='Họ và tên khách' require />
-                            <TypeRadio />
+                            <Gender />
                             <TypeDate label='Ngày sinh' wrapCss='mt-[26px]' />
                         </div>
                     </div>
@@ -58,21 +60,15 @@ const ModalCreateFile = ({ open, setOpen }: ModalProps) => {
                     </div>
                 </div>
                 <TextAreaComp label='Ghi chú' rows={4} wrapCss="mr-4" />
-                <div className="footer mt-14 -mr-2 flex float-right w-1/6 cursor-pointer" >
-                    <div className={`h-9 font-bold leading-9 px-2 text-[${COLORS.primaryColor}] rounded hover:bg-[#f7f1e6]`} onClick={() => setOpen(false)}>HỦY</div>
-                    <div className={`relative border rounded mx-2 text-[${COLORS.primaryColor}] w-[100%] h-9 text-center leading-9 bg-[#ece3d5] opacity-50`} onClick={() => setOpen(false)}>
-                        <span className="ml-5 font-bold" >
-                            Lưu thông tin
-                        </span>
-                        <img
-                            className="absolute top-[10px] left-3 w-[18px] h-[18px] "
-                            src={done}
-                            alt=""
-                        />
+                <div className="flex justify-between">
+                    <div className=""> </div>
+                    <div className="footer mt-14 mr-4 flex cursor-pointer" >
+                        <Button label='HỦY' handleClick={handleClose} wrapCss={`w-[60px] text-primary font-bold hover:bg-[#f7f1e6]`} />
+                        <Button src={done} label='Lưu thông tin' wrapCss={`w-[160px] text-primary  font-bold bg-[#ece3d5] opacity-50`} />
                     </div>
                 </div>
             </div>
-        </Modal>
+        </Modal >
     )
 }
 

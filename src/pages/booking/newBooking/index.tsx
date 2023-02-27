@@ -3,6 +3,7 @@ import { Tabs } from "antd";
 import TypeCheckbox from "../../../components/input/TypeCheckbox";
 import CustomerInfo from "./customerInfo/CustomerInfo";
 import BookingInfo from "./bookingInfo/BookingInfo";
+import OtherInfo from "./otherInfo/OtherInfo";
 
 const NewBooking = () => {
     return (
@@ -44,7 +45,7 @@ const NewBooking = () => {
                         {
                             label: `Thông tin khác`,
                             key: "other",
-                            children: `Thông tin khác`,
+                            children: <OtherInfo />,
                         },
                     ]}
                 />

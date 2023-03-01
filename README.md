@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+            {/* 
+            <FastField name="number" component={TypeNumber} label="Test Number" />
+            <FastField component={TypeTime} label="Gio đi 1" nameInput="time" require /> */}
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

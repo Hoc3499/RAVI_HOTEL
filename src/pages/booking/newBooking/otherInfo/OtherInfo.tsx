@@ -14,6 +14,7 @@ import TypeText from '../../../../components/input/TypeText'
 import TypeTime from "../../../../components/input/TypeTime"
 import SelectComp from '../../../../components/select/SelectComp'
 import TableComp from "../../../../components/table/TableComp"
+import Action from "../../../../components/Action";
 
 
 interface DataType {
@@ -141,15 +142,17 @@ const OtherInfo = () => {
 
             </div>
             <div className="border rounded mt-8">
-                <div className="flex justify-between border mx-4 my-4 h-10 items-center opacity-40">
+                <div className="flex justify-between border mx-4 my-4 h-10 items-center ">
                     <div className="relative mx-12">
                         <img src={create} alt="" className="w-[20px] h-[20px] absolute top-[2px] -left-8" />
                         <span className={`text-[14px] text-primary`}>Thêm/ sửa dịch vụ đặc biệt</span>
                     </div>
                     <div className="flex mx-4 cursor-pointer">
-                        <img src={edit} alt="" className="w-[20px] h-[20px]" />
-                        <img src={file} alt="" className="w-[20px] h-[20px] ml-6" />
+                        {/* <img src={edit} alt="" className="w-[20px] h-[20px]" />
+                        <img src={file} alt="" className="w-[20px] h-[20px] ml-6" /> */}
 
+                        <Action description="Đính kèm file" src={file} css="w-[65px]" />
+                        <Action description="Sửa thông tin" src={edit} css="w-[70px]" wrapCss="-mr-4" />
                     </div>
                 </div>
                 <TableComp columns={columns} data={data} pagination={false} />

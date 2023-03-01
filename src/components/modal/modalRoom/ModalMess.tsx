@@ -6,6 +6,7 @@ import cancel from "../../../assets/icons/cancel_FILL0_wght400_GRAD0_opsz48.svg"
 import edit from "../../../assets/icons/edit_FILL0_wght400_GRAD0_opsz48_black.svg";
 import print from "../../../assets/icons/print_FILL0_wght400_GRAD0_opsz48.svg";
 import send from "../../../assets/icons/send_FILL0_wght400_GRAD0_opsz48.svg";
+import Action from "../../Action";
 import Button from "../../button/Button";
 import HeaderTableBookingInfo from "../../header/HeaderTableBookingInfo";
 import TableComp from "../../table/TableComp";
@@ -95,11 +96,16 @@ const ModalMess = ({ openModal, setOpenModal }: ModalProps) => {
                                 <span className="font-bold text-base">Thông tin tin nhắn</span>
                             </div>
                             <div className="flex cursor-pointer">
-                                <img src={add} alt="" className="w-[20px] h-[20px] " onClick={() => setOpenAddMess(true)} />
+                                {/* <img src={add} alt="" className="w-[20px] h-[20px] " onClick={() => setOpenAddMess(true)} />
                                 <img src={edit} alt="" className="w-[20px] h-[20px] mx-4" onClick={() => setOpenEditMess(true)} />
                                 <img src={send} alt="" className="w-[20px] h-[20px]" />
                                 <img src={cancel} alt="" className="w-[20px] h-[20px] mx-4" />
-                                <img src={print} alt="" className="w-[20px] h-[20px]" />
+                                <img src={print} alt="" className="w-[20px] h-[20px]" /> */}
+                                <Action description="Thêm tin nhắn" src={add} css="w-[70px]" onClick={() => setOpenAddMess(true)} />
+                                <Action description="Sửa tin nhắn" src={edit} css="w-[65px]" onClick={() => setOpenEditMess(true)} />
+                                <Action description="Gửi tin nhắn" src={send} css="w-[65px]" />
+                                <Action description="Hủy tin nhắn" src={cancel} css="w-[65px]" />
+                                <Action description="In tin nhắn (Ctrl+P)" src={print} css="w-[95px]" />
                             </div>
                         </div>
                         <ModalAddMess openModal={openAddMess} setOpenModal={setOpenAddMess} />

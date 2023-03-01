@@ -1,6 +1,3 @@
-:root {
-  --primary-color: #ba9256;
-}
 
 .ant-picker-dropdown .ant-picker-cell .ant-picker-cell-inner {
   border-radius: 50%;
@@ -43,6 +40,10 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
+input[type="checkbox"]:checked {
+  visibility: visible;
+}
+
 /* css datepicker */
 
 .ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before {
@@ -65,30 +66,30 @@ input[type="checkbox"] {
 }
 
 .ant-picker:hover {
-  border-color: #c4c4c4;
+  border-color: #d1d1d1;
   box-shadow: none !important;
 }
 .ant-picker:focus {
-  border-color: #c4c4c4 !important;
+  border-color: #d1d1d1 !important;
 }
 
 .ant-picker-focused {
-  border-color: #c4c4c4 !important;
+  border-color: #d1d1d1 !important;
   box-shadow: none !important;
 
 }
 
 .ant-input:hover {
-  border-color: #c4c4c4 !important;
+  border-color: #d1d1d1 !important;
 }
 .ant-input:focus {
-  border-color: #c4c4c4 !important;
+  border-color: #d1d1d1 !important;
   box-shadow: none;
 }
 
 
 .ant-select-selector:hover, .ant-select-selector:focus-within {
-  border: 1px solid #c4c4c4 !important;
+  border: 1px solid #d1d1d1 !important;
   box-shadow: none !important;
 }
 

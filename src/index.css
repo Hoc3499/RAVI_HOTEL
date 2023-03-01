@@ -5,7 +5,6 @@
 @import "./styles/components/table.css";
 @import "./styles/themes.css";
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -31,3 +30,7 @@ code {
   transform: translate(-50%, 0);
 }
 
+img, video {
+  max-width: none;
+  width: 20px;
+}

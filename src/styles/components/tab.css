@@ -1,8 +1,4 @@
 
-:root {
-    --primary-color: #BA9256;
-  }
-  
 
 .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
     color: var(--primary-color) !important;

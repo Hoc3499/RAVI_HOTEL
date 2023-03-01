@@ -6,6 +6,7 @@ import cancel from "../../../assets/icons/cancel_FILL0_wght400_GRAD0_opsz48.svg"
 import check from "../../../assets/icons/check_circle_FILL0_wght400_GRAD0_opsz48.svg";
 import edit from "../../../assets/icons/edit_FILL0_wght400_GRAD0_opsz48_black.svg";
 import undo from "../../../assets/icons/undo_FILL0_wght400_GRAD0_opsz48.svg";
+import Action from "../../Action";
 import Button from "../../button/Button";
 import HeaderTableBookingInfo from "../../header/HeaderTableBookingInfo";
 import TableComp from "../../table/TableComp";
@@ -109,11 +110,16 @@ const ModalComment = ({ openModal, setOpenModal }: ModalProps) => {
                                 <span className="font-bold text-base">Danh sách bình luận</span>
                             </div>
                             <div className="flex cursor-pointer">
-                                <img src={add} alt="" className="w-[20px] h-[20px] " onClick={() => setOpenAddComment(true)} />
+                                {/* <img src={add} alt="" className="w-[20px] h-[20px] " onClick={() => setOpenAddComment(true)} />
                                 <img src={edit} alt="" className="w-[20px] h-[20px] mx-4" onClick={() => setOpenEditComment(true)} />
                                 <img src={check} alt="" className="w-[20px] h-[20px]" />
                                 <img src={cancel} alt="" className="w-[20px] h-[20px] mx-4" />
-                                <img src={undo} alt="" className="w-[20px] h-[20px]" />
+                                <img src={undo} alt="" className="w-[20px] h-[20px]" /> */}
+                                <Action description="Thêm mới bình luận" src={add} css="w-[120px]" onClick={() => setOpenAddComment(true)} />
+                                <Action description="Chỉnh sửa bình luận" src={edit} css="w-[100px]" onClick={() => setOpenEditComment(true)} />
+                                <Action description="Xử lý bình luận" src={check} css="w-[75px]" />
+                                <Action description="Hủy bình luận" src={cancel} css="w-[75px]" />
+                                <Action description="Hoàn tác" src={undo} />
                             </div>
                         </div>
                         <TableComp columns={columns} data={data} pagination={false} />

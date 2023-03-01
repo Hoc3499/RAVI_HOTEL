@@ -6,16 +6,17 @@ interface TextAreaCompProps {
   require?: any;
   rows?: number;
   wrapCss?: string;
+  field?: any;
 }
 
-const TextAreaComp = ({ label, require, rows, wrapCss }: TextAreaCompProps) => {
+const TextAreaComp = ({ label, require, rows, wrapCss, field }: TextAreaCompProps) => {
   const { TextArea } = Input;
 
   return (
     <div className={`${wrapCss}`}>
       <span className="font-light text-xs">{label}</span>
       {require && <span className="text-red-500 ml-1">*</span>}
-      <TextArea rows={rows} />
+      <TextArea rows={rows}  {...field} />
     </div>
   )
 }

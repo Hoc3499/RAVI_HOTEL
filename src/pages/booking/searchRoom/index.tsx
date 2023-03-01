@@ -2,9 +2,14 @@ import React from 'react'
 
 const SearchRoom = () => {
     return (
-        <div>
-            SearchRoom
-        </div>
+        <ul>
+            <li className="group/item">
+                Adam
+                <p className="group/edit invisible  group-hover/item:visible " >
+                    Call
+                </p>
+            </li>
+        </ul>
     )
 }
 

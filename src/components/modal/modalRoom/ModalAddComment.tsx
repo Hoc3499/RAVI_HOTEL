@@ -16,7 +16,7 @@ const ModalAddComment = ({ openModal, setOpenModal }: ModalProps) => {
         <>
             <Modal
                 title="Thêm nội dung bình luận"
-                style={{ top: -175 }}
+                style={{ top: -160 }}
                 centered
                 open={openModal}
                 // onOk={() => setOpenModal(false)}

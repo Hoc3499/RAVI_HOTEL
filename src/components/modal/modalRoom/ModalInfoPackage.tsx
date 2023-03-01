@@ -215,8 +215,7 @@ const ModalInfoPackage = ({ openModal, setOpenModal }: ModalProps) => {
                     <div
                         className={` flex float-right mt-12 font-bold text-primary`}
                     >
-                        <Button label='HỦY' handleClick={() => { setOpenModal(false) }} wrapCss={`w-[60px] text-primary  hover:bg-[#f7f1e6]`} />
-                        <Button src={done} label='Lưu thông tin' wrapCss={`w-[160px]   text-primary text-white btn-primary ml-2 `} />
+                        <Button label='Đóng' handleClick={() => { setOpenModal(false) }} wrapCss={`w-[60px] text-primary  hover:bg-[#f7f1e6]`} />
                     </div>
                 </div>
             </Modal>

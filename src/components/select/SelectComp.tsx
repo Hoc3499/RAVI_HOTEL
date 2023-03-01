@@ -11,11 +11,13 @@ interface SelectProps {
     label?: string;
     require?: any;
     wrapCss?: string;
+    form?: any;
+    selectLabel?: string;
+    error?: any;
 }
 
-const SelectComp = ({ label, options, require, wrapCss }: SelectProps) => {
-    const handleChange = () => {
-    }
+const SelectComp = ({ label, options, require, wrapCss, form, selectLabel, error }: SelectProps) => {
+
     return (
 
         <div className={`${wrapCss ? `${wrapCss} flex flex-col mr-4 mb-[15px]` : "flex flex-col mr-4 mb-[15px]"}`}>
@@ -24,15 +26,15 @@ const SelectComp = ({ label, options, require, wrapCss }: SelectProps) => {
                 {require && <span className="text-red-500 ml-1">*</span>}
             </div>
             <Select
-                dropdownStyle={{ color: 'green' }}
+                onChange={(value) => form.setFieldValue(selectLabel, value)}
                 defaultValue="lucy"
-                onChange={handleChange}
                 options={[
                     { value: 'jack', label: 'a' },
                     { value: 'lucy', label: 'b' },
                     { value: 'Yiminghe', label: 'c' },
                     { value: 'disabled', label: 'd', disabled: true },
                 ]}
+                className={`${error ? "border border-red-500" : ""}`}
             />
         </div>
 

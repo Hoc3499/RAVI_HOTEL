@@ -6,9 +6,10 @@ interface ProfileProps {
     label?: string;
     wrapCss?: string;
     inputCss?: string;
+    field?: any;
 }
 
-const InputSearch = ({ setOpenModal, require, label, wrapCss, inputCss }: ProfileProps) => {
+const InputSearch = ({ setOpenModal, require, label, wrapCss, inputCss, field }: ProfileProps) => {
 
     return (
         <div className={`${wrapCss ? `${wrapCss} mr-[15px]` : `mr-[15px]`}`}>
@@ -24,6 +25,7 @@ const InputSearch = ({ setOpenModal, require, label, wrapCss, inputCss }: Profil
                     />
                 </div>
                 <input
+                    {...field}
                     type="text"
                     className="border py-[9px] rounded w-full outline-none pl-3 h-9"
                 />

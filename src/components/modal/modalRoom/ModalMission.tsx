@@ -6,6 +6,7 @@ import cancel from "../../../assets/icons/cancel_FILL0_wght400_GRAD0_opsz48.svg"
 import check from "../../../assets/icons/check_circle_FILL0_wght400_GRAD0_opsz48.svg";
 import info from "../../../assets/icons/info_black_24dp.svg";
 import undo from "../../../assets/icons/undo_FILL0_wght400_GRAD0_opsz48.svg";
+import Action from "../../Action";
 import Button from "../../button/Button";
 import HeaderTableBookingInfo from "../../header/HeaderTableBookingInfo";
 import TableComp from "../../table/TableComp";
@@ -101,11 +102,16 @@ const ModalMission = ({ openModal, setOpenModal }: ModalProps) => {
                                 <span className="font-bold text-base">Danh sách nhiệm vụ</span>
                             </div>
                             <div className="flex cursor-pointer">
-                                <img src={add} alt="" className="w-[20px] h-[20px] " onClick={() => setOpenAddMission(true)} />
+                                {/* <img src={add} alt="" className="w-[20px] h-[20px] " onClick={() => setOpenAddMission(true)} />
                                 <img src={info} alt="" className="w-[20px] h-[20px] mx-4" onClick={() => setOpenInfoMission(true)} />
                                 <img src={check} alt="" className="w-[20px] h-[20px]" />
                                 <img src={cancel} alt="" className="w-[20px] h-[20px] mx-4" />
-                                <img src={undo} alt="" className="w-[20px] h-[20px]" />
+                                <img src={undo} alt="" className="w-[20px] h-[20px]" /> */}
+                                <Action description="Thêm mới nhiệm vụ" src={add} css="w-[100px]" onClick={() => setOpenAddMission(true)} />
+                                <Action description="Chi tiết nhiệm vụ" src={info} css="w-[85px]" onClick={() => setOpenInfoMission(true)} />
+                                <Action description="Hoàn thành" src={check} />
+                                <Action description="Hủy nhiệm vụ" src={cancel} css="w-[70px]" />
+                                <Action description="Hoàn tác" src={undo} />
                             </div>
                         </div>
                         <TableComp columns={columns} data={data} pagination={false} />

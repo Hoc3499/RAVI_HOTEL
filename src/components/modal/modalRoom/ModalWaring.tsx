@@ -4,6 +4,7 @@ import { useState } from "react";
 import add from "../../../assets/icons/add_FILL0_wght400_GRAD0_opsz48_black.svg";
 import remove from "../../../assets/icons/delete_black_24dp.svg";
 import edit from "../../../assets/icons/edit_FILL0_wght400_GRAD0_opsz48_black.svg";
+import Action from "../../Action";
 import Button from "../../button/Button";
 import HeaderTableBookingInfo from "../../header/HeaderTableBookingInfo";
 import TableComp from "../../table/TableComp";
@@ -82,9 +83,12 @@ const ModalWaring = ({ openModal, setOpenModal }: ModalProps) => {
                                 <span className="font-bold text-base">Danh sách cảnh báo</span>
                             </div>
                             <div className="flex cursor-pointer">
-                                <img src={add} alt="" className="w-[20px] h-[20px] " onClick={() => setOpenAddWarning(true)} />
+                                {/* <img src={add} alt="" className="w-[20px] h-[20px] " onClick={() => setOpenAddWarning(true)} />
                                 <img src={edit} alt="" className="w-[20px] h-[20px] mx-4" onClick={() => setOpenEditWarning(true)} />
-                                <img src={remove} alt="" className="w-[20px] h-[20px]" />
+                                <img src={remove} alt="" className="w-[20px] h-[20px]" /> */}
+                                <Action description="Thêm mới cảnh báo" src={add} css="w-[100px]" onClick={() => setOpenAddWarning(true)} />
+                                <Action description="Sửa thông tin cảnh báo" src={edit} css="w-[115px]" onClick={() => setOpenEditWarning(true)} />
+                                <Action description="Xóa cảnh báo" src={remove} css="w-[70px]" />
                             </div>
                             <ModalAddWarning openModal={openAddWarning} setOpenModal={setOpenAddWarning} />
                             <ModalEditWaring openModal={openEditWarning} setOpenModal={setOpenEditWarning} />

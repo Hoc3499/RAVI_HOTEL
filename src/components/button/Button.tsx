@@ -5,14 +5,15 @@ interface Props {
     label?: string;
     labelCss?: string;
     handleClick?: any;
+    type?: any;
 }
 
-const Button = ({ src, wrapCss, label, handleClick, labelCss }: Props) => {
+const Button = ({ src, wrapCss, label, handleClick, labelCss, type }: Props) => {
 
 
 
     return (
-        <div className={`${wrapCss} relative rounded h-9 text-center leading-9 cursor-pointer`} onClick={handleClick}>
+        <button type={type} className={`${wrapCss} relative rounded h-9 text-center leading-9 cursor-pointer`} onClick={handleClick}>
             <span className={labelCss}>
                 {label}
             </span>
@@ -21,7 +22,7 @@ const Button = ({ src, wrapCss, label, handleClick, labelCss }: Props) => {
                 src={src}
                 alt=""
             />}
-        </div>
+        </button>
     )
 }
 

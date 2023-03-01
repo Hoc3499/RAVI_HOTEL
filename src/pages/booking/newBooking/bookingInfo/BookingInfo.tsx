@@ -38,6 +38,8 @@ import ModalVipCard from "../../../../components/modal/modalRoom/ModalVipCard";
 import ModalWaring from "../../../../components/modal/modalRoom/ModalWaring";
 import SelectComp from "../../../../components/select/SelectComp";
 import TableComp from "../../../../components/table/TableComp";
+import ModalGroup from "../../../../components/modal/modalRoom/ModalGroup";
+import Action from "../../../../components/Action";
 
 
 interface DataType {
@@ -131,6 +133,7 @@ const BookingInfo = () => {
     const [openModalVipCard, setOpenModalVipCard] = useState(false);
     const [openModalService, setOpenModalService] = useState(false);
     const [openModalInfoPackage, setOpenModalInfoPackage] = useState(false);
+    const [openModalGroup, setOpenModalGroup] = useState(false);
 
     return (
         <div className="border ">
@@ -146,13 +149,14 @@ const BookingInfo = () => {
                 <TypeText label="Số điện thoại" require />
                 <TypeText label="Email" require />
             </div>
-            <div className="border mx-4 border-y border-x-transparent mt-4 pt-3 pb-4">
+            <div className="border ml-4 border-y border-x-transparent mt-4 pt-3 pb-4">
                 <span className=" font-bold text-xl ">Thông tin đặt phòng</span>
                 <div className="grid grid-cols-3 gap-y-5  mt-3">
                     <TypeDate label="Thời gian nhận phòng" require />
                     <SelectComp label="Hạng đặt" require />
-                    <InputSearch label="Đoàn/Đoàn phụ" inputCss="mt-[-1px]" />
+                    <InputSearch label="Đoàn/Đoàn phụ" inputCss="mt-[-1px]" setOpenModal={setOpenModalGroup} />
                 </div>
+                <ModalGroup openModal={openModalGroup} setOpenModal={setOpenModalGroup} />
                 <div className="grid grid-cols-6 gap-y-5 ">
                     <TypeDate label="Thời gian trả phòng" require wrapCss="col-span-2" />
                     <SelectComp label="Hạng thực" require wrapCss="col-span-2" />
@@ -185,7 +189,7 @@ const BookingInfo = () => {
                     <TypeDate label="Ngày nhắc" wrapCss="col-span-2" />
                 </div>
             </div>
-            <div className="border border-t-transparent border-b border-x-transparent mx-4 py-3">
+            <div className="border border-t-transparent border-b border-x-transparent ml-4 py-3">
                 <span className=" font-bold text-xl ">Thống kê</span>
                 <div className="grid grid-cols-3">
                     <SelectComp label="Công ty, đại lý du lịch" require />
@@ -264,7 +268,7 @@ const BookingInfo = () => {
                     </div>
                 </div>
             </div>
-            <div className="mt-4 mx-4  pt-3 pb-4">
+            <div className="mt-4 ml-4  pt-3 pb-4">
                 <span className=" font-bold text-xl ">Thông tin thanh toán</span>
                 <div className="grid grid-cols-3 mt-[10px]">
                     <SelectComp label="Phương thức thanh toán" require />
@@ -274,7 +278,7 @@ const BookingInfo = () => {
                     </div>
                     <TypeText label="Tên chủ thẻ" />
                 </div>
-                <TextAreaComp label="Ghi chú" require rows={4} />
+                <TextAreaComp label="Ghi chú" require rows={4} wrapCss="mr-4" />
             </div>
             <div className="">
                 <div className="flex justify-between border mx-4 my-4 h-16 items-center relative rounded">
@@ -291,47 +295,53 @@ const BookingInfo = () => {
                     </div>
                     <ModalService openModal={openModalService} setOpenModal={setOpenModalService} />
                     <div className="flex mx-4 cursor-pointer relative">
-                        <img
+                        <Action description="Nhiệm vụ" src={report} onClick={() => setOpenModalMisson(true)} />
+                        <Action description="Bình luận" src={comment} onClick={() => setOpenModalComment(true)} />
+                        <Action description="Báo cáo" src={warning} onClick={() => setOpenModalWaring(true)} />
+                        <Action description="Tin nhắn" src={chat} onClick={() => setOpenModalMess(true)} />
+                        <Action description="Sao chép" src={content} />
+                        <Action description="" src={vert} wrapCss="" onClick={() => setOpenOption(!openOption)} />
+                        {/* <img
                             src={report}
                             alt=""
                             className="w-[20px] h-[20px]"
                             onClick={() => setOpenModalMisson(true)}
-                        />
+                        /> */}
                         <ModalMission
                             openModal={openModalMisson}
                             setOpenModal={setOpenModalMisson}
                         />
-                        <img
+                        {/* <img
                             src={comment}
                             alt=""
                             className="w-[20px] h-[20px] mx-6"
                             onClick={() => setOpenModalComment(true)}
-                        />
+                        /> */}
                         <ModalComment
                             openModal={openModalComment}
                             setOpenModal={setOpenModalComment}
                         />
-                        <img
+                        {/* <img
                             src={warning}
                             alt=""
                             className="w-[20px] h-[20px]"
                             onClick={() => setOpenModalWaring(true)}
-                        />
+                        /> */}
                         <ModalWaring
                             openModal={openModalWaring}
                             setOpenModal={setOpenModalWaring}
                         />
-                        <img
+                        {/* <img
                             src={chat}
                             alt=""
                             className="w-[20px] h-[20px] mx-6"
                             onClick={() => setOpenModalMess(true)}
-                        />
+                        /> */}
                         <ModalMess
                             openModal={openModalMess}
                             setOpenModal={setOpenModalMess}
                         />
-                        <img
+                        {/* <img
                             src={content}
                             alt=""
                             className="w-[20px] h-[20px]  mr-6 hover:bg-orange-100 rounded-full"
@@ -341,7 +351,7 @@ const BookingInfo = () => {
                             alt=""
                             className="w-[20px] h-[20px] hover:bg-orange-100 rounded-full"
                             onClick={() => setOpenOption(!openOption)}
-                        />
+                        /> */}
                         {openOption && (
                             <div className="absolute mt-8 right-[-18px] w-[280px] h-[190px] z-[1000] bg-white drop-shadow-lg  ">
                                 <div className="flex my-2 py-2 hover:bg-gray-200">

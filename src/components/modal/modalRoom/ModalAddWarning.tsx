@@ -1,6 +1,5 @@
 import { Modal } from "antd";
 import done from "../../../assets/icons/done_white_24dp.svg";
-import { COLORS } from "../../../constants/colors";
 import Button from "../../button/Button";
 import HeaderTableBookingInfo from "../../header/HeaderTableBookingInfo";
 import TextAreaComp from "../../input/TextAreaComp";
